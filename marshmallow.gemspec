@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Marshmallow::VERSION
   spec.authors       = ["Nic Scott"]
   spec.email         = ["scottnl@kenyon.edu"]
-  spec.summary       = %q{A collection of macOS facts and useful information for admins}
+  spec.summary       = %q{A collection of macOS facts and useful information for MacAdmins}
   spec.homepage      = "https://github.com/nlscott/marshmallow"
   spec.license       = "MIT"
 
