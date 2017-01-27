@@ -1,5 +1,6 @@
 # Marshmallow
-This gem is a collction of macOS specfic facts and actions that may be helpful for macadmins
+This gem is a collction of macOS specfic facts and actions that may be helpful for macadmins.
+Tested on macOS 10.12.
 
 
 ## Usage
@@ -40,6 +41,7 @@ output should be similar to this:
 - ard_info4
 
 ##  Examples:
+
 To print serial number: `puts Marshmallow.serial`
 
 To print computer name: `puts Marshmallow.computer_name`

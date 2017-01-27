@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Nic Scott"]
   spec.email         = ["scottnl@kenyon.edu"]
   spec.summary       = %q{A collection of macOS facts and useful information for admins}
-  #spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/nlscott/marshmallow"
   spec.license       = "MIT"
 
 =begin
