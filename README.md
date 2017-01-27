@@ -3,7 +3,7 @@ This gem is a collction of macOS specfic facts and actions that may be helpful f
 
 
 ## Usage
-To see a list of availible options for Marshmallow, require 'Marshmallow' in file then type:
+To see a list of availible options for Marshmallow, require 'Marshmallow' in file then type:  
 `puts Marshmallow.methods(false)`
 
 
