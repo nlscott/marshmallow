@@ -5,40 +5,47 @@ Tested on macOS 10.12.
 
 ## Usage
 To see a list of availible options for Marshmallow, require 'Marshmallow' in file then type:  
-`puts Marshmallow.methods(false)`
+`puts Marshmallow.options`
 
 
 output should be similar to this:
 ***
-- users
-- users_number
-- listoflocaladmins
-- apps_installed
-- apps_number
-- serial
-- os_version
-- build
-- model
-- model_id
-- processor_name
-- processor_speed
-- processor_number
-- cores
-- memory
-- boot_rom
-- smc
-- uuid
-- graphics
-- free_space
-- hd_size
-- boot_volume
-- computer_name
-- sys_launchagents
-- sys_launchdaemons
-- ard_info1
-- ard_info2
-- ard_info3
-- ard_info4
+	- apps_installed
+	- ard_info1
+	- ard_info2
+	- ard_info3
+	- ard_info4
+	- boot_rom
+	- boot_volume
+	- build
+	- computer_name
+	- cores
+	- domain_check
+	- fastuserswitch_check
+	- firewall_check
+	- free_space
+	- graphics
+	- hd_size
+	- listoflocaladmins
+	- loginwindow_check
+	- memory
+	- model
+	- model_id
+	- options
+	- os_version
+	- processor_name
+	- processor_number
+	- processor_speed
+	- profiles_all
+	- profiles_installed
+	- serial
+	- smc
+	- system_launchagents
+	- system_launchdaemons
+	- user_launchagents
+	- user_launchdaemons
+	- users
+	- uuid
 
 ##  Examples:
 
