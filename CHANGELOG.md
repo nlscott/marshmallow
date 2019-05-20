@@ -1,3 +1,7 @@
+## 0.2.0 (5.20.2019)
+- fixed issues with the return vaules for memory, smc, and uuid
+- provided better error messages if no vaules existed in ard info fields
+
 ## 0.1.3 (2.8.2017)
 - added options for: profiles_installed, profiles_all, domain_check, firewall_check, fastuserswitch_check, loginwindow_check, user_launchagents, userlaunchdaemons, and options
 - fixed code for ardinfo's to use 'CFPropertyList'

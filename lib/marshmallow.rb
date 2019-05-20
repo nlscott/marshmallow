@@ -83,8 +83,9 @@ module Marshmallow
 
 	def self.memory
 		memory = `system_profiler SPHardwareDataType`.split("\n")
-		memory = memory[12].split(":")
-		return memory[1].strip
+        memory = memory.grep(/Memory:/).join(":").strip.split(":")
+        memory = memory[1].strip
+        return memory
 	end
 
 	def self.boot_rom
@@ -95,16 +96,18 @@ module Marshmallow
 
 	def self.smc
 		smc = `system_profiler SPHardwareDataType`.split("\n")
-		smc = smc[14].split(":")
-		return smc[1].strip
+        smc = smc.grep(/SMC/).join(":").strip.split(":")
+        smc = smc[1].strip
+        return smc
 	end
 
 	def self.uuid
 		uuid = `system_profiler SPHardwareDataType`.split("\n")
-		uuid = uuid[16].split(":")
-		return uuid[1].strip
-	end
-
+        results =  uuid.grep(/UUID:/).join(":").strip.split(":")
+        results = results[1].strip
+        return results
+    end
+    
 	def self.graphics
 		graphics = `system_profiler SPDisplaysDataType`.split("\n")
 		graphics = graphics[2].split(":")
@@ -198,41 +201,41 @@ module Marshmallow
 	def self.ard_info1
 		plist = CFPropertyList::List.new(:file => "/Library/Preferences/com.apple.RemoteDesktop.plist")
 		results = CFPropertyList.native_types(plist.value)
-		if results['Text1'].empty?
-			return "null"
-		else
-			return results['Text1']
-		end
+		if results.key?('Text1')
+            return results['Text1']
+        else
+            return "Error: plist does not contain key for 'Text1'"
+        end
 	end
 
 	def self.ard_info2
 		plist = CFPropertyList::List.new(:file => "/Library/Preferences/com.apple.RemoteDesktop.plist")
 		results = CFPropertyList.native_types(plist.value)
-		if results['Text2'].empty?
-			return "null"
-		else
-			return results['Text2']
-		end
+		if results.key?('Text2')
+            return results['Text2']
+        else
+            return "Error: plist does not contain key for 'Text2'"
+        end
 	end
 
 	def self.ard_info3
 		plist = CFPropertyList::List.new(:file => "/Library/Preferences/com.apple.RemoteDesktop.plist")
 		results = CFPropertyList.native_types(plist.value)
-		if results['Text3'].empty?
-			return "null"
-		else
-			return results['Text3']
-		end
+		if results.key?('Text3')
+            return results['Text3']
+        else
+            return "Error: plist does not contain key for 'Text3'"
+        end
 	end
 
 	def self.ard_info4
 		plist = CFPropertyList::List.new(:file => "/Library/Preferences/com.apple.RemoteDesktop.plist")
 		results = CFPropertyList.native_types(plist.value)
-		if results['Text4'].empty?
-			return "null"
-		else
-			return results['Text4']
-		end
+		if results.key?('Text4')
+            return results['Text4']
+        else
+            return "Error: plist does not contain key for 'Text4'"
+        end
 	end
 
 	def self.profiles_installed
