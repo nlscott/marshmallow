@@ -1,14 +1,15 @@
 # Marshmallow
-This gem is a collction of macOS specfic facts and actions that may be helpful for macadmins.
-Tested on macOS 10.12.
+> **Note:** This has not been fully tested since macOS 10.14 but is working as of Ventura 13.4.1
+
+This gem is a collection of macOS specific facts and actions that may be helpful for macadmins.
 
 
 ## Usage
-To see a list of availible options for Marshmallow, require 'Marshmallow' in file then type:  
+To see a list of available options for Marshmallow, require 'Marshmallow' in the file then type:  
 `puts Marshmallow.options`
 
 
-output should be similar to this:
+the output should be similar to this:
 ***
 	- apps_installed
 	- ard_info1
@@ -49,9 +50,9 @@ output should be similar to this:
 
 ##  Examples:
 
-To print serial number: `puts Marshmallow.serial`
+To print the serial number: `puts Marshmallow.serial`
 
-To print computer name: `puts Marshmallow.computer_name`
+To print the computer name: `puts Marshmallow.computer_name`
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
